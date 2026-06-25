@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css">
     <title>Meu BLOG</title>
 </head>
+
 <body>
-   <header>
-    <h1>Meu blog</h1>
-    <p>mirela santos</p>
-    <p>vou comparetilhar com você alguns filmes e séries</p>
-   </header>
-   <main>
-    <h2>Meu primeiro post</h2>
-    <p>Boas vindas ao meu blog</p>
-    <img src="https://s3.us-east-1.amazonaws.com/vnda-cockpit/www-delmondostore-com-br/2022/02/08/6202cde38b3c9series-filmes-e-livros.jpg"
-    alt="filmes e livros">
-    <button>❤️<span>0</span></button>
-   </main>
+    <header>
+        <h1>Meu blog</h1>
+        <p>mirela santos</p>
+        <p>vou comparetilhar com você alguns filmes e séries</p>
+    </header>
+    <main>
+        <h2>Meu primeiro post</h2>
+        <p>Boas vindas ao meu blog</p>
+        <img src="https://s3.us-east-1.amazonaws.com/vnda-cockpit/www-delmondostore-com-br/2022/02/08/6202cde38b3c9series-filmes-e-livros.jpg"
+            alt="filmes e livros">
+        <button>❤️<span>0</span></button>
+    </main>
 </body>
+<script>
+    const botoes = document.querySelectorAll("button");
+    botoes.forEach(function (botao) {
+        botao.addEventListener("click", botaoclicado);
+        function botsoclicado() {
+            let texto = botao.querySelector("span");
+            texto.textContent++;
+        }
+    })
+</script>
+
 </html>
